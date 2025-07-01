@@ -1,16 +1,6 @@
 """
-Main file - Hello World
+Main file - basic code to test ruff and mypy
 """
-
-_var = "a variable"
-
-
-def main() -> None:
-    """
-    Main function
-    """
-
-    print("Hello World!")
 
 
 def foo() -> None:
@@ -37,6 +27,3 @@ long_string = "This is a very long line that exceeds the maximum allowed  line l
     Python code. This is a very long line that exceeds the maximum allowed"
 
 MY_TUPLE = (1, 2, 3)
-
-if __name__ == "__main__":
-    main()
