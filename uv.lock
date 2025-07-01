@@ -163,6 +163,7 @@ dev = [
 ]
 lint = [
     { name = "mypy" },
+    { name = "pre-commit" },
     { name = "ruff" },
 ]
 
@@ -172,6 +173,7 @@ lint = [
 dev = [{ name = "pre-commit", specifier = ">=4.2.0" }]
 lint = [
     { name = "mypy", specifier = ">=1.16.1" },
+    { name = "pre-commit", specifier = ">=4.2.0" },
     { name = "ruff", specifier = ">=0.12.0" },
 ]
 
