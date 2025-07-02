@@ -81,11 +81,11 @@ flowchart LR
     F -- No --> G --> F
     E -.- H
 
-    classDef decision fill:#e0e0e0,stroke:#888,font-size:12px;
-    classDef success fill:#c6f6c6,stroke:#2c662d,font-size:12px;
-    classDef failure fill:#fbd3d3,stroke:#d9534f,font-size:12px;
-    classDef standard fill:#f4f4f4,stroke:#aaa,font-size:12px;
-    classDef note fill:#fffacc,stroke:#e6c200,font-size:12px,font-style:italic;
+     classDef decision fill:#e0e0e0,stroke:#888,font-size:12px,color:#000000;
+    classDef success fill:#c6f6c6,stroke:#2c662d,font-size:12px,color:#000000;
+    classDef failure fill:#fbd3d3,stroke:#d9534f,font-size:12px,color:#000000;
+    classDef standard fill:#f4f4f4,stroke:#aaa,font-size:12px,color:#000000;
+    classDef note fill:#fffacc,stroke:#e6c200,font-size:12px,font-style:italic,color:#000000;
 
     class A,E,G,H standard
     class B,F decision
