@@ -50,8 +50,50 @@ Whenever you run:
 ```bash
 git commit -m "<message>"
 ```
-the pre-commit hooks will run automatically.
-If any checks fail, the commit will be aborted.
+💡 When you run `git commit`, ***pre-commit hooks*** will automatically execute and checks  across the entire codebase by sing mypy and ruff.
+
+**⚙️ Pre-commit Hook Behavior: Key Considerations**
+
+* ⛔️ If any checks fail, the commit will be aborted. You must fix the issues before trying again.
+To avoid losing work, commit frequently rather than making large, uncommitted changes.
+
+* 🟢 Tools like Ruff and Mypy can automatically fix many common issues—such as formatting problems, unused imports, and basic type errors.
+
+* 🟡 However, not all issues are auto-fixable. Some require manual intervention due to ambiguity or context-specific logic.
+
+* 🔎 To confirm everything is clean after auto-fixes, run:  `pre-commit run --all-files`.
+
+* 👨🏻‍💻 If issues persist, you’ll need to address them manually before retrying the commit.
+
+```mermaid
+flowchart LR
+    A[git add . <br>git commit]
+    B{Pass to hook <br>checks?}
+    C[✅ <br>commited]
+    D[⛔️ NOT<br>commited]
+    E[Verify...]
+    F{Issues<br>resolved?}
+    G[Change<br>manually]
+    H(pre-commit run --all-files)
+
+    A-->B-- Yes --> C
+    B -- No --> D --> E --> F -- yes--> A
+    F -- No --> G --> F
+    E -.- H
+
+    classDef decision fill:#e0e0e0,stroke:#888,font-size:12px;
+    classDef success fill:#c6f6c6,stroke:#2c662d,font-size:12px;
+    classDef failure fill:#fbd3d3,stroke:#d9534f,font-size:12px;
+    classDef standard fill:#f4f4f4,stroke:#aaa,font-size:12px;
+    classDef note fill:#fffacc,stroke:#e6c200,font-size:12px,font-style:italic;
+
+    class A,E,G,H standard
+    class B,F decision
+    class C success
+    class D failure
+    class H note
+
+```
 
 
 ## 3. Customization
