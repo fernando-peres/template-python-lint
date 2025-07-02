@@ -93,6 +93,8 @@ flowchart LR
     class D failure
     class H note
 
+    %% Arrow (link) styles
+    linkStyle default stroke:#999,stroke-width:1.5px;
 ```
 
 
