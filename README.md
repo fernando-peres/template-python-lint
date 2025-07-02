@@ -78,14 +78,14 @@ flowchart LR
 
     A-->B-- Yes --> C
     B -- No --> D --> E --> F -- yes--> A
-    F -- No --> G --> F
+    F -- No --> G --> E
     E -.- H
 
-     classDef decision fill:#e0e0e0,stroke:#888,font-size:12px,color:#000000;
+    classDef decision fill:#fffacc,stroke:#888,font-size:12px,color:#000000;
     classDef success fill:#c6f6c6,stroke:#2c662d,font-size:12px,color:#000000;
     classDef failure fill:#fbd3d3,stroke:#d9534f,font-size:12px,color:#000000;
     classDef standard fill:#f4f4f4,stroke:#aaa,font-size:12px,color:#000000;
-    classDef note fill:#fffacc,stroke:#e6c200,font-size:12px,font-style:italic,color:#000000;
+    classDef note fill:#ADD8E6,stroke:#ADD8E6,font-size:12px,font-style:italic,color:#000000;
 
     class A,E,G,H standard
     class B,F decision
